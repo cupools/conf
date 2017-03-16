@@ -1,11 +1,11 @@
 /* eslint-env mocha */
 
 import Chai from 'chai'
-import loader from '../src/loader'
+import transform from '../src/transform'
 
-describe('loader', () => {
+describe('transform', () => {
   it('should work', () => {
-    loader`
+    transform`
       _os:
         iOS:
           $: os=ios

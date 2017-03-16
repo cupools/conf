@@ -5,7 +5,7 @@
   "main": "loader.js",
   "scripts": {
     "transpile": "webpack --config build/webpack.prod.js",
-    "babel": "rm -rf lib/* && node node_modules/babel-cli/bin/babel src/loader.js -o lib/loader.js",
+    "babel": "rm -rf lib/* && node node_modules/babel-cli/bin/babel src/transform.js -o lib/transform.js",
     "build": "npm run babel && npm run transpile",
     "test": "cross-env NODE_ENV=testing node_modules/.bin/nyc --reporter lcov --reporter text --report-dir test/coverage --require babel-core/register node_modules/.bin/mocha test/*.test.js && rm -rf .nyc_output",
     "coverage": "cat test/coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
